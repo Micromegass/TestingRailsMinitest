@@ -13,7 +13,16 @@ class ArticleTest < ActiveSupport::TestCase
   assert_not @article.save
  end 
 
+# test "this test should throw an error" do
+#   undefined variable
+#   assert true
+# end 
 
 
+test "capitalize title should return an article with capitalized title" do
+  @article = Article.new(title: "hola")
+  @article.capitalize_title
+  assert_equal 'Hola', @article.title
+end 
 
 end
